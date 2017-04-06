@@ -22,7 +22,7 @@ public class mainTest {
 	public void sampleRun() throws IOException{
 		initializeWebDriver();
 		driver.get("https://es.wikipedia.org/wiki/Wikipedia:Portada");
-		driver.findElement(By.id("searchInput")).sendKeys("testeame");
+		driver.findElement(By.id("searchInput")).sendKeys("test");
 		driver.findElement(By.id("searchButton")).click();
 		String text  = driver.findElement(By.xpath("//*[@id='mw-content-text']/ul[1]/li/b/a[contains(.,'examen')]")).getText();
 		Assert.assertEquals("test string is displayed properly", text, "examen");
